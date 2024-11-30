@@ -63,12 +63,13 @@ class SleepReminderResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('sleep_name')
+                    ->sortable()
                     ->searchable(),
+                Tables\Columns\TextColumn::make('sleep_name'),
                 Tables\Columns\TextColumn::make('bedtime'),
                 Tables\Columns\TextColumn::make('wake_up_time'),
-                Tables\Columns\TextColumn::make('repeat'),
+                Tables\Columns\TextColumn::make('repeat')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

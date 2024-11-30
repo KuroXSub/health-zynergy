@@ -38,7 +38,8 @@ class InterestResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('interest')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('note')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')

@@ -38,7 +38,8 @@ class DiseaseResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('disease')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('note'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
