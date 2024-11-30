@@ -57,12 +57,13 @@ class MealReminderResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('meal_name'),
-                Tables\Columns\TextColumn::make('meal_time'),
-                Tables\Columns\TextColumn::make('repeat')
                     ->sortable(),
+                Tables\Columns\TextColumn::make('meal_name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('meal_time')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('repeat')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

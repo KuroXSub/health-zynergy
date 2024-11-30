@@ -22,6 +22,16 @@ class StatsOverview extends BaseWidget
                     ->toArray())
                 ->color($this->getColorBasedOnTrend(User::class))
                 ->icon('heroicon-o-users'),
+
+            Stat::make('Total Admin', User::where('role', 'Admin')->count())
+                ->description('Admin')
+                ->color('success')
+                ->icon('heroicon-o-pencil-square'),
+
+            Stat::make('Total User', User::where('role', 'User')->count())
+                ->description('User')
+                ->color('success')
+                ->icon('heroicon-o-pencil-square'),
         ];
     }
 

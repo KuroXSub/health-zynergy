@@ -53,8 +53,7 @@ class ArticleResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable()
-                    ->sortable(),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('interests.id')
                     ->label('Interests')
                     ->formatStateUsing(function ($record) {

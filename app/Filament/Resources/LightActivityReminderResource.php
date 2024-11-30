@@ -59,10 +59,11 @@ class LightActivityReminderResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('activity_name'),
-                Tables\Columns\TextColumn::make('activity_time'),
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('activity_name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('activity_time')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('repeat')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')

@@ -49,17 +49,18 @@ class HealthCheckupReminderResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
-                    ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('checkup_name'),
+                Tables\Columns\TextColumn::make('checkup_name')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('next_checkup_date')
-                    ->date(),
+                    ->date()
+                    ->sortable(),
                 Tables\Columns\IconColumn::make('is_reminded')
                     ->label('Reminded')
                     ->boolean()
                     ->trueColor('info')
                     ->falseColor('warning')
-                    ->sortable(),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
